@@ -1,0 +1,318 @@
+
+/*头部开始*/
+.head h1{
+	padding-right:100px;
+}
+.head .icon-cd{
+	position: absolute;
+	width: 60px;
+	height: 45px;
+	background: url(../image/icons.png) 15px -70px no-repeat;
+	background-size: 25px 500px;
+	top: 0;
+	left: 0;
+}
+.head .icon-ss{
+	position: absolute;
+	width: 60px;
+	height: 45px;
+	background: url(../image/icons.png) 15px -155px no-repeat;
+	background-size: 25px 500px;
+	top: 0;
+	right: 0;
+}
+.head .head_ul{
+	height: 65px;
+	display: none;
+	background: #fff;
+}
+.head .head_ul li{
+	float: left;
+	width: 33.3333%;
+	text-align: center;
+	line-height: 65px;
+}
+.head .head_ul li a{
+	display: block;
+	width: 100%;
+	height: 65px;
+	color: #ccc;
+	padding-top: 20px;
+}
+.head .head_ul li a.menu-sp{
+	background: url(../image/menu.png) center 10px no-repeat;
+	background-size: 35px 500px;
+}
+.head .head_ul li a.menu-hy{
+	background: url(../image/menu.png) center -70px no-repeat;
+	background-size: 35px 500px;
+}
+.head .head_ul li a.menu-gw{
+	background: url(../image/menu.png) center -168px no-repeat;
+	background-size: 35px 500px;
+}
+/*头部结束*/
+
+/*内容主体开始*/
+.home{
+	margin-top: 45px;	
+}
+
+/*轮播广告开始*/
+.home .banner{
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.home .banner .banner-ul{
+	width: 700%;
+}
+.home .banner .banner-ul li{
+	float: left;
+	width: 14.28%;
+}
+.home .banner .banner-ul li a{
+	display: block;
+	width: 100%;
+	position: relative;
+}
+.home .banner .banner-ul li a img{
+	width: 100%;
+	display: block;
+}
+.home .banner ul:last-child{
+	height: 6px;
+	width: 88px;
+	position: absolute;
+	bottom: 2px;
+	left: 50%;
+	margin-left: -49px;
+}
+.home .banner ul:last-child li{
+	width: 6px;
+	height: 6px;
+	border-radius:3px;
+	border: 1px solid transparent;
+	background: #999;
+	float: left;
+	margin-left: 10px;
+}
+.home .banner ul:last-child li:first-child{
+	margin-left: 0;
+}
+.home .banner ul:last-child li.now{
+	background:#fff;
+}
+.home .banner p{
+	background: rgba(0,0,0,.3);
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 20%;
+	text-align: center;
+	color: #fff;
+	line-height: 180%;
+}
+/*轮播广告结束*/
+
+
+/*菜单导航开始*/
+.grid{
+	width: 100%;
+	padding: 15px 10px;
+}
+.grid ul{
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-radius: 5px;
+	background: #fff;
+}
+.grid ul li{
+	float: left;
+	width: 25%;
+	height: 100%;
+}
+.grid ul li a{
+	display: block;
+	width: 100%;
+	height: 4.5em;
+	text-align: center;
+	line-height: 6.5em;
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	position: relative;
+}
+.grid ul li:nth-child(1) a{
+	border-radius: 5px 0 0 0;
+}
+.grid ul li:nth-child(4) a{
+	border-radius: 0 5px 0 0;
+}
+.grid ul li:nth-child(5) a{
+	border-radius: 0 0 5px 0;
+}
+.grid ul li:nth-child(8) a{
+	border-radius: 0 0 0 5px;
+}
+.grid ul li a span{
+	position: absolute;
+	top: 5px;
+	left: 50%;
+	margin-left: -15px;
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+}
+.grid ul li a span i{
+	position: absolute;
+	top: 0;
+	left:0;
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+}
+.grid ul li:nth-child(1) a span{	
+	background: #178a50;	
+}
+.grid ul li:nth-child(1) a span i{	
+	background: url(../image/grid.png) center 3px no-repeat;
+	background-size: 30px 350px;
+}
+.grid ul li:nth-child(2) a span{
+	background: #c69886;
+}
+.grid ul li:nth-child(2) a span i{
+	background: url(../image/grid.png) center -43px no-repeat;
+	background-size: 30px 350px;
+}
+.grid ul li:nth-child(3) a span{
+	background: #008bce;
+}
+.grid ul li:nth-child(3) a span i{
+	background: url(../image/grid.png) center -86px no-repeat;
+	background-size: 30px 350px;
+}
+.grid ul li:nth-child(4) a span{	
+	background: #C10000;
+}
+.grid ul li:nth-child(4) a span i{
+	background: url(../image/grid.png) center -130px no-repeat;
+	background-size: 30px 350px;
+}
+.grid ul li:nth-child(5) a span{	
+	background: #531408;
+}
+.grid ul li:nth-child(5) a span i{
+	background: url(../image/grid.png) center -177px no-repeat;
+	background-size: 30px 350px;
+}
+.grid ul li:nth-child(6) a span{	
+	background: #faab02;
+}
+.grid ul li:nth-child(6) a span i{
+	background: url(../image/grid.png) center -217px no-repeat;
+	background-size: 30px 350px;
+}
+.grid ul li:nth-child(7) a span{	
+	background: #68b227;
+}
+.grid ul li:nth-child(7) a span i{
+	background: url(../image/grid.png) center -259px no-repeat;
+	background-size: 30px 350px;
+}
+.grid ul li:nth-child(8) a span{	
+	background: #fb7252;
+}
+.grid ul li:nth-child(8) a span i{
+	background: url(../image/grid.png) center -308px no-repeat;
+	background-size: 30px 350px;
+}
+/*菜单导航结束*/
+
+/*销售排行开始*/
+.list{	
+	width: 100%;
+	padding: 0 10px;
+	/*line-height: 0;*/
+}
+.list>a{
+	display: block;
+	width: 100%;
+	height: 60px;
+	background: #fff;
+	margin-bottom: 10px;
+	color: #ccc;
+}
+.list>a>em{
+	display: inline-block;
+	width: 30px;
+	height:60px;
+	text-align: center;
+	font-size: 1.4em;
+	line-height: 60px;
+	color: #fff;
+	background: #ccc;
+}
+.list>a>img{
+	height: 100%;
+	margin-left: 3px;
+	/*margin-top: -5px;*/
+}
+.list>a>div{
+	display: inline-block;
+	height: 60px;
+	margin-left: 5%;
+}
+.list>a>div>p{
+	padding-top: 5px;
+	padding-bottom: 7px;
+}
+.list>a>div>span{
+	color: #E00202;
+	font-weight: 500;
+	margin-right: 5px;
+}
+.list>a>b{
+	font-family: simsun;
+	font-weight: 700;
+	color: #c81f1f;
+	float: right;
+	margin-top:15px;
+	margin-right: 7px;
+	font-size: 1.4em;
+}
+.list>a>b>span{
+	font-size: 1.1em;
+	margin-left: 5px;
+	color: #ccc;
+}
+.list>a:nth-child(1)>em{	
+	background: #e00202;
+}
+.list>a:nth-child(2)>em{	
+	background: #ff4a00;
+}
+.list>a:nth-child(3)>em{	
+	background: #ff7300;
+}
+/*销售排行结束*/
+
+/*内容主体结束*/
+
+
+/*尾部开始*/
+.footer{
+	width: 100%;
+	margin-top: 30px;
+	text-align: center;
+	color: #ccc;
+}
+.footer a{
+	margin: 0 2px;
+	color: #999;
+}
+.footer span{
+	color: #999;
+}
+/*尾部结束*/

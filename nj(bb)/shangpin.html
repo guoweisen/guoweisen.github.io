@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+   		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+   		<link rel="shortcut icon" href="njlogo.ico"/>
+   		<link rel="stylesheet" href="css/base.css" />
+    	<link rel="stylesheet" href="css/shangpin.css" />
+		<title>包包</title>
+		<!--[if lt IE 9]>
+		  <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+		<![endif]-->
+	</head>
+	<body ng-app="myApp" ng-controller="myController">
+		<div class="bb_layout">
+	    	<!--搜索栏开始-->
+	    	<header class="bb_header">
+	    		<div class="bb_header_box">
+	    			<a href="#" class="icon_logo gouwuchel" id="backId">
+	    				<img src="img/fanhui.png" />
+	    			</a>
+	    			<a href="gouwuche.html" class="icon_logo gouwucher">
+	    				
+	    			</a>
+	    			<form class="gouwuche">
+	    				<input type="text" placeholder="商品搜索" />
+	    			</form>
+	    			<a href="denglv.html" class="login">登录</a>
+	    		</div>
+	    	</header>
+    		<!--搜索栏结束-->
+    	
+    	
+    		<!--主体内容开始-->
+			<div class="home">
+				<div class="list">
+					<ul class="head_ul">
+						<li><a href="#" class="now" ng-click="order('totalCount',px)">销量</a></li>
+						<li><a href="#" ng-click="order('jdPrice',px)">价格</a></li>
+						<li class="sx">筛选<span></span></li>
+					</ul>
+				</div>
+				<div class="header_div">
+					<div class="clearfix1">
+						<p class="header_div_p">
+							<span>材质&nbsp;:</span>
+							<a href="#" class="ys">不限</a>
+							<a href="#">牛皮</a>
+							<a href="#">帆布</a>
+							<a href="#">尼龙</a>
+							<a href="#">PU</a>
+							<a href="#">涤纶</a>
+							<a href="#">PVC</a>
+							<a href="#">皮革</a>
+							<a href="#">羊皮</a>
+							<a href="#">牛津纺</a>
+							<a href="#">棉纶</a>
+						</p>
+					</div>
+					<div class="clearfix2">
+						<p class="header_div_p">
+							<span>颜色&nbsp;:</span>
+							<a href="#" class="ys">不限</a>
+							<a href="#">黑色</a>
+							<a href="#">白色</a>
+							<a href="#">红色</a>
+							<a href="#">黄色</a>
+							<a href="#">蓝色</a>
+							<a href="#">绿色</a>
+							<a href="#">紫色</a>
+							<a href="#">粉色</a>
+							<a href="#">橙色</a>
+							<a href="#">玫瑰红</a>
+							<a href="#">裸色</a>
+							<a href="#">驼色</a>
+							<a href="#">花色</a>
+						</p>
+					</div>
+					<div class="clearfix3">
+						<p class="header_div_p">
+							<span>外形&nbsp;:</span>
+							<a href="#" class="ys">不限</a>
+							<a href="#">水饺型</a>
+							<a href="#">圆桶形</a>
+							<a href="#">横款方形</a>
+							<a href="#">方盒形</a>
+							<a href="#">正梯形</a>
+							<a href="#">贝壳形</a>
+							<a href="#">信封形</a>
+							<a href="#">翅膀形</a>
+							<a href="#">圆盒形</a>
+							<a href="#">新月形</a>
+						</p>
+					</div>
+					<div class="clearfix4">
+						<p class="header_div_p">
+							<span>开袋方式&nbsp;:</span>
+							<a href="#" class="ys">不限</a>
+							<a href="#">拉链</a>
+							<a href="#">搭扣</a>
+							<a href="#">包盖式</a>
+							<a href="#">拉链搭扣</a>
+							<a href="#">抽带</a>
+							<a href="#">敞口</a>
+							<a href="#">魔术贴</a>
+							<a href="#">扭锁</a>
+							<a href="#">锁扣</a>
+							<a href="#">其他</a>
+						</p>
+					</div>
+					
+				</div>
+				
+				<div class="gray">
+					<div  ng-repeat="tiem in data|orderBy:type:px track by $index">
+						<a href="xiangqing.html" ng-click="xiangQ(tiem.longImgUrl,tiem.wname,tiem.jdPrice)">
+							<div class="gray_img">
+								<img src="{{tiem.longImgUrl}}" alt="加载中..."/>
+							</div>						
+							<div class="gray_xq">
+								<p>{{tiem.wname}}</p>
+								<p><span>￥</span>{{tiem.jdPrice}}元</p>
+								<p>{{tiem.totalCount}}人已经购买</p>
+							</div>						
+						</a>
+						<span class="jrGwc" ng-click="jrGwc(tiem.longImgUrl,tiem.wname,tiem.jdPrice)"></span>
+					</div>
+					<p class="jiazai">加载完毕...</p>
+				</div>
+			</div>
+			<!--主体内容结束-->		
+    	
+	    	<div class="rocket">
+	    		<div>
+				    <img src="img/fhdb.png" id="backTop"/>
+				</div>
+			</div>
+  	  </div> 
+    	
+    	<script src="js/angular.min.js"></script>
+    	<script src="js/common.js"></script>
+    	<script src="js/shangpin.js"></script>
+		<script src="js/base.js"></script>
+	
+	</body>
+</html>

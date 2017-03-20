@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+   	<link rel="shortcut icon" href="njlogo.ico"/>
+   	<link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/wulicx.css" />
+    <title>商城</title>  
+    <!--[if lt IE 9]>
+		  <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+		<![endif]-->
+  </head>
+  <body>
+    <div class="bb_layout">
+    	<!--搜索栏开始-->
+    	<header class="bb_header">
+    		<div class="bb_header_box">
+    			<a href="index.html" class="icon_logo">
+    				<img src="img/fanhui.png" />
+    			</a>
+    			<form>
+    				<input type="text" placeholder="请输入单号" />
+    			</form>
+    			<a href="#" class="login">查询</a>
+    		</div>
+    	</header>
+    	<!--搜索栏结束-->  
+    	<div class="main">
+    		<ol>
+    			
+    		</ol>
+    	</div>    	
+    </div>	
+	</body>
+	<script src="js/jquery.js"></script>
+	<script type="text/javascript">
+//		http://v.juhe.cn/exp/index?key=13d109884aa3d13ff560e589b52a37e9&com=sf&no=575677355677
+	
+		 $(".login").on("click",function(){
+//	        var aa=$("input").val();
+//	        console.log($("input").val())
+	        $.ajax({
+	            dataType:"jsonp",
+	            type:"get",
+	            url:"http://v.juhe.cn/exp/index",
+//							url:"http://v.juhe.cn/exp/index?key=b4bd6b5af77a4064fe3c30d06a0e04dd&com=yt&no=700316143275",
+	            data:{
+	                key:"b4bd6b5af77a4064fe3c30d06a0e04dd",
+	                com:"yt",
+	                no:$("input").val()
+	            },
+	            success:function(data){
+//	            	console.log(data)
+	            	if(data.result==null||data.reason=="应用未审核超时，请提交认证"){
+	            		$("ol").html("");
+	            		$("ol").append("<li>没有该单号!</li>");
+	            		$("ol").css({"color":"#F23030","list-style":"none"});
+	            		return;
+	            	}
+	              var data = data.result.list;
+	            	$("ol").html("");
+	            	$("ol").css({"color":"#000","list-style":"decimal"})
+	                for(var i=0;i<data.length;i++){
+	                    $("ol").append("<li>"+data[i].datetime+"<br>"+data[i].remark+"</li>");
+	                };
+	           }
+	       });
+	    });
+
+		
+	</script>
+</html>

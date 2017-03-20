@@ -1,0 +1,93 @@
+/*基础样式*/
+html,body,div,ul,ol,li,dl,dt,dd,input,textarea,span,a,img,p,h1,h2,h3,h4,h5,h6,form{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+body{
+	font-size: 14px;
+	width: 100%;
+	min-width: 320px;
+	max-width: 640px;
+	font-family: "microsoft yahei",sans-serif;
+	color: #666;
+	background: #f7f7f7;
+	margin: 0 auto;
+}
+a{
+	text-decoration: none;
+	color: #666;
+}
+ul,li{
+	list-style: none;
+}
+img{
+	vertical-align: middle;
+}
+input,textarea{
+	outline-style: none;
+	outline: none;
+	/*-webkit-appearance: none;*/
+	border: none;
+	resize: none;
+}
+.clearfix::before,.clearfix::after{
+	content: "";
+	clear: both;
+	height: 0;
+	display: block;
+	visibility: hidden;
+	overflow: hidden;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+
+
+
+/*公共样式*/
+.wrap{
+	margin: 0 auto;
+	width: 100%;
+}
+
+
+.header{
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	color: #fff;
+	z-index: 1;
+}
+.head{
+	width: 100%;
+	height: 45px;
+	min-width: 320px;
+	max-width: 640px;
+	margin: 0 auto;
+	background:#c10000;	
+	position: relative;
+}
+
+.head h1{
+	text-align: center;
+	width:100%;
+	padding-left:100px;
+	padding-right:50px;
+	font-size: 18px;
+	line-height: 45px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.head>a{
+	position: absolute;
+	width: 45px;
+	height: 45px;
+}

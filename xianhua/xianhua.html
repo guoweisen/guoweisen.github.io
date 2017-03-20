@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"/>
+		<title>鲜花</title>
+		<link rel="shortcut icon" href="favicon.ico"/>
+		<link rel="stylesheet" href="CSS/base.css" />
+		<link rel="stylesheet" href="CSS/xianhua.css">
+	</head>
+	<body  ng-app="myApp" ng-controller="myController">
+		<div class="wrap">
+			<!--头部开始-->
+			<div class="header">
+				<div class="head">
+					<a href="index.html" class="icon-fh"></a>
+					<a href="#" class="icon-cd"></a>
+					<a href="gouwuche.html" class="icon-gwc"></a>
+					<h1>鲜花</h1>
+					<a href="#" class="icon-ss"></a>
+					<a href="index.html" class="icon-zy"></a>					
+				</div>
+				<div class="header-div">
+					<div class="clearfix">
+						<span>鲜花朵数</span>
+						<p class="header-div-p">
+							<a href="#" class="ys">全部</a>
+							<a href="#">1朵</a>
+							<a href="#">2朵</a>
+							<a href="#">3朵</a>
+							<a href="#">4朵</a>
+							<a href="#">5朵</a>
+							<a href="#">6朵</a>
+							<a href="#">7朵</a>
+							<a href="#">8朵</a>
+							<a href="#">9朵</a>
+							<a href="#">10朵</a>
+							<a href="#">11朵</a>
+							<a href="#">12朵</a>
+							<a href="#">13朵</a>
+							<a href="#">14朵</a>
+							<a href="#">15朵</a>
+							<a href="#">16朵</a>
+							<a href="#">17朵</a>
+							<a href="#">18朵</a>
+							<a href="#">19朵</a>
+							<a href="#">20朵</a>
+							<a href="#">21朵</a>
+						</p>
+					</div>
+					<div class="clearfix">
+						<span>鲜花主材</span>
+						<p class="header-div-p">
+							<a href="#" class="ys">全部</a>
+							<a href="#">七彩玫瑰</a>
+							<a href="#">剑兰</a>
+							<a href="#">勿忘我</a>
+							<a href="#">向日葵</a>
+							<a href="#">康乃馨</a>
+							<a href="#">戴安娜</a>
+						</p>
+					</div>
+					<div class="clearfix">
+						<span>送花对象</span>
+						<p class="header-div-p">
+							<a href="#" class="ys">全部</a>
+							<a href="#">客户</a>
+							<a href="#">朋友/同事</a>
+							<a href="#">爱人</a>
+							<a href="#">父母</a>
+							<a href="#">病人</a>
+							<a href="#">老师</a>
+							<a href="#">领导/长辈</a>
+						</p>
+					</div>
+					<div class="clearfix">
+						<span>送花节日</span>
+						<p class="header-div-p">
+							<a href="#" class="ys">全部</a>
+							<a href="#">3.8妇女节</a>
+							<a href="#">七夕</a>
+							<a href="#">中秋节</a>
+							<a href="#">元旦</a>
+							<a href="#">其他节日</a>
+							<a href="#">圣诞节</a>
+						</p>
+					</div>
+					<div class="clearfix">
+						<span>鲜花用途</span>
+						<p class="header-div-p">
+							<a href="#" class="ys">全部</a>
+							<a href="#">亲情</a>
+							<a href="#">会议</a>
+							<a href="#">其他</a>
+							<a href="#">友情</a>
+							<a href="#">周年纪念</a>
+							<a href="#">商务</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<!--头部结束-->
+			
+			<!--主体内容开始-->
+			<div class="home">
+				<div class="list">
+					<ul class="head_ul">
+						<li><a href="#" class="now" ng-click="order('sl')">销量</a></li>
+						<li><a href="#" ng-click="order('jg')">价格</a></li>
+						<li><a href="#" ng-click="order('name')">上架时间</a></li>
+					</ul>
+				</div>
+				
+				<div class="gray">
+					<a href="changpin.html" ng-repeat="tiem in data|orderBy:type:true track by $index">
+						<div class="gray-img">
+							<img src="{{tiem.image}}" alt="加载中..."/>
+						</div>						
+						<div class="gray-xq">
+							<p>{{tiem.name}}</p>
+							<p><strong><span>{{mth(tiem.zk/10*tiem.jg)}}元</span></strong><s>{{tiem.jg}}元</s>{{tiem.zk}}折</p>
+							<p>{{tiem.sl}}人已经购买<span></span></p>
+						</div>						
+					</a>
+					<p class="jiazai">加载完毕...</p>
+				</div>
+			</div>
+			<!--主体内容结束-->			
+		</div>
+		
+		<script src="JS/angular.min.js"></script>
+		<script src="JS/xianhua.js"></script>
+	</body>
+</html>

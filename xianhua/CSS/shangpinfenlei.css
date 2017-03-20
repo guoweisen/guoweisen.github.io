@@ -1,0 +1,137 @@
+/*头部开始*/
+.head h1{
+	padding-right:100px;
+}
+.head .icon-fh{	
+	background: url(../image/icons.png) 10px 9px no-repeat;
+	background-size: 25px 500px;
+	top: 0;
+	left: 0;
+}
+.head .icon-zy{
+	background: url(../image/icons.png) 10px -382px no-repeat;
+	background-size: 25px 500px;
+	top: 0;
+	right: 0;
+}
+
+/*头部结束*/
+
+/*主体内容开始*/
+.home{
+	margin-top: 45px;
+	padding: 0 10px;
+}
+.home ul{
+	padding-top: 15px;	
+	border: 1px solid #d9d8d4;	
+	border-radius: 0 0 5px 5px;
+	background: #fcfbfb;
+}
+.home ul li{
+	float: left;
+	width: 25%;
+}
+.home ul li a{
+	display: block;
+	width: 100%;
+	height: 4.6em;
+	text-align: center;
+	line-height: 6.5em;
+	border-top: 1px solid #e4e7ed;
+	border-right: 1px solid #e4e7ed;
+	position: relative;
+}
+.home ul li:nth-child(4n) a{
+	border-right:none;
+}
+.home ul li a span{
+	position: absolute;
+	top: 5px;
+	left: 50%;
+	margin-left: -15px;
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	background: #fb7252;
+}
+.home ul li a span i{
+	position: absolute;
+	top: 0;
+	left:0;
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	background: url(../image/grid.png) center -309px no-repeat;
+	background-size: 30px 350px;
+}
+
+/*主体内容结束*/
+
+/*登录页面开始*/
+.denglv{
+	margin-top: 50px;
+	padding:10px;	
+}
+.denglv div{
+	border: 1px solid #D9D8D4;
+	border-radius: 5px;
+	background: #fff;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.1),0 1px 2px rgba(245,245,245,.7);
+}
+.denglv div p{
+	padding: 10px 0 10px 40px ;
+	position: relative;
+}
+.denglv div p:first-child{
+	border-bottom: 1px solid #efefef;
+}
+.denglv div p span{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	top: 0;
+	left: 0;
+}
+.denglv div p:first-child span{
+	background: url(../image/icons.png) center -295px no-repeat;
+	background-size: 25px 500px;
+}
+.denglv div p:last-child span{
+	background: url(../image/icons.png) center -334px no-repeat;
+	background-size: 25px 500px;
+}
+.denglv div p input{
+	height: 20px;
+	background: none;
+	font-weight: 500;
+}
+
+.denglv>input{
+	width: 100%;
+	height: 45px;
+	background: #C10000;
+	border-radius: 5px;
+	margin-top: 20px;
+	text-align: center;
+	line-height: 45px;
+	font-size: 1.5em;
+	font-weight: 700;
+	letter-spacing: 2px;
+	color: #fff;
+	box-shadow: inset 0 1px 1px rgba(255,255,255,.2),0 1px 2px rgba(152,3,3,.4);
+}
+.denglv>p{
+	margin-top: 20px;
+}
+.denglv>p a{
+	color: #C10000;
+	font-size: 15px;
+}
+.denglv>p a:last-child{
+	float: right;
+}
+#span{
+	color: #C10000;
+}
+/*登录页面结束*/

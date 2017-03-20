@@ -1,0 +1,59 @@
+
+
+.main{
+	padding: 26px 20px;
+}
+.main form{
+	/*padding: 0 20px;*/
+}
+.main form input{
+	height: 40px;
+	border-radius: 5px;
+	border: 1px solid #d9d8d4;
+	padding: 0 5px;
+	margin: 5px 0;
+	background: #fff;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.1),0 1px 2px rgba(245,245,245,.7);
+}
+.main form .name{
+	width: 100%;
+}
+.main form .mima{
+	width: 100%;
+}
+.main form .yanzheng{
+	width: 50%;
+	margin-right: 10px;
+}
+.main form .fs{
+	width: 25%;
+}
+.main form .zhuce{
+	width: 100%;
+	color: #fff;
+	margin-top: 20px;
+	font-weight: 500;
+	font-size: 18px;
+	background: #c10000;
+	border: 1px solid #b20000;
+	box-shadow: inset 0 1px 1px rgba(255,255,255,.2),0 1px 2px rgba(152,3,3,.4);
+}
+.main form a{
+	margin-top: 5px;
+	float: right;
+	text-decoration: underline;
+}
+.main form span{
+	display: inline-block;
+	width: 25%;
+	height: 40px;
+	background: #fff;
+	text-align: center;
+	line-height: 40px;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.1),0 1px 2px rgba(245,245,245,.7);
+	border: 1px solid #d9d8d4;
+	border-radius: 5px;
+	color: #c80000;
+	font-style: italic;
+	font-weight: 600;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+   		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+   		<link rel="shortcut icon" href="njlogo.ico"/>
+   		<link rel="stylesheet" href="css/base.css" />
+   		<link rel="stylesheet" href="css/gouwuche.css" />
+   		<title>购物车</title>
+		<!--[if lt IE 9]>
+		  <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+		<![endif]-->
+		<script src="js/template-native.js"></script>
+		<script src="js/jquery.js"></script>
+	</head>
+	<body>
+		<div class="bb_layout">
+			<!--搜索栏开始-->
+	    	<header class="bb_header">
+	    		<div class="bb_header_box">
+	    			<a href="#" class="icon_logo" id="backId">
+	    				<img src="img/fanhui.png" />
+	    			</a>
+	    			<form>
+	    				<input type="text" placeholder="商品搜索" />
+	    			</form>
+	    			<a href="index.html" class="login"><img src="img/zhuye.png"/></a>
+	    			
+	    		</div>
+	    	</header>
+    		<!--搜索栏结束-->
+			
+			
+			<!--主体块开始-->
+			<div class="main">
+				<div class="main_head">
+					<p class="fl"><input type="checkbox" checked="checked" class="quanxuan"/>数量 : <span class="shuliang"></span></p>
+					<p class="fr">总额 : <span class="zonge"></span> 元</p>
+				</div>
+				<div class="main_cp">
+					
+				</div>
+			</div>			
+			<!--主体块结束-->
+			
+			<!--尾部按钮开始-->
+			<div class="footer">
+				<div class="anniu">					
+					<a href="#">立即购买</a>					
+				</div>
+			</div>
+			<!--尾部按钮结束-->
+		</div>	
+		
+		<script type="text/template" id="waterfall">
+			<%for(var i=0;i<json.length;i++){%>
+				<div class="main_cp_kuai clearfix" data-index=<%=i%>>
+					<div class="fl">
+						<input type="checkbox" class="check" checked="checked"/>
+					</div>
+					<div class="fr shuju">
+						<img src="<%=json[i].src%>" />
+						<h4><%=json[i].name%></h4>
+						<div>
+							￥<span class="jiage"><%=json[i].price%></span>
+							<p><b>-</b><input type="number" value="1" class="shuzhi"><b>+</b></p>
+						</div>
+						<p><span class="btn_t"></span><span class="btn_b"></span></p>
+					</div>								
+				</div>
+			<%}%>
+		</script>
+		
+		<script src="js/gouwuche.js"></script>
+		<script src="js/base.js"></script>
+	</body>
+</html>

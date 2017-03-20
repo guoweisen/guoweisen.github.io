@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"/>
+		<title>鲜花网</title>
+		<link rel="shortcut icon" href="favicon.ico"/>
+		<link rel="stylesheet" href="CSS/base.css" />
+		<link rel="stylesheet" href="CSS/index.css" />
+	</head>
+	<body>
+		<div class="wrap">
+			<!--头部开始-->
+			<div class="header">
+				<div class="head">
+					<a href="#" class="icon-cd"></a>
+					<h1>手机鲜花网(flower)</h1>
+					<a href="#" class="icon-ss"></a>
+					<ul class="head_ul">
+						<li><a href="shangpinfenlei.html" class="menu-sp">商品类目</a></li>
+						<li><a href="denglv.html" class="menu-hy">会员中心</a></li>
+						<li><a href="gouwuche.html" class="menu-gw">购物车</a></li>
+					</ul>
+				</div>
+			</div>
+			<!--头部结束-->
+			
+			<!--主体内容开始-->
+			<div class="home">
+				<div class="banner">
+					<ul class="banner-ul clearfix">
+						<li><a href="#">
+								<img src="image/1.jpg"/>
+								<p>今天，你的她许愿了吗？</p>
+							</a>
+						</li>
+						<li><a href="#">
+								<img src="image/2.jpg"/>
+								<p>温暖是将整颗心都送给TA</p>
+							</a>
+						</li>
+						<li><a href="#">
+								<img src="image/3.jpg"/>
+								<p>父亲节专题：父爱如山</p>
+							</a>
+						</li>
+						<li><a href="#">
+								<img src="image/4.jpg"/>
+								<p>圣诞节：平安夜，祝福你~</p>
+							</a>
+						</li>
+						<li><a href="#">
+								<img src="image/5.jpg"/>
+								<p>温暖元旦，献礼2015</p>
+							</a>
+						</li>
+						<li><a href="#">
+								<img src="image/6.jpg"/>
+								<p>祝天下有情人终成眷属，买花送给Ta!</p>
+							</a>
+						</li>
+						<li><a href="#">
+								<img src="image/1.jpg"/>
+								<p>今天，你的她许愿了吗？</p>
+							</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="now"></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					
+				</div>
+				<div class="grid">
+					<ul class="clearfix">
+						<li><a href="xianhua.html"><span><i></i></span>鲜花</a></li>
+						<li><a href="#"><span><i></i></span>蛋糕</a></li>
+						<li><a href="#"><span><i></i></span>礼蓝</a></li>
+						<li><a href="#"><span><i></i></span>会员中心</a></li>
+						<li><a href="#"><span><i></i></span>巧克力</a></li>
+						<li><a href="#"><span><i></i></span>卡通花束</a></li>
+						<li><a href="#"><span><i></i></span>开业花篮</a></li>
+						<li><a href="#"><span><i></i></span>订单查询</a></li>
+					</ul>
+				</div>
+				<div class="list" ng-app="myApp" ng-controller="myController">
+					<a href="changpin.html" ng-repeat="item in data">
+						<em>{{item.id}}</em>
+						<img src="{{item.image}}"/ alt="加载中...">
+						<div>
+							<p>{{item.dd}}人已经购买</p>
+							<span>{{item.yh}}折</span><s>{{item.dj}}元</s>
+						</div>
+						<b>{{int(item.yh/10*item.dj)}}<span>></span></b>
+					</a>
+				</div>
+			</div>
+			<!--主体内容结束-->
+			
+			<!--尾部开始-->
+			<div class="footer">
+				<a href="#">汇款确认</a>|
+				<a href="#">电脑版</a>|
+				<a href="denglv.html">会员登录</a><br />
+				<a href="#">下载鲜花网APP客户端</a>
+				<span>花付宝软件(北京)有限公司</span>
+			</div>
+			<!--尾部结束-->
+			
+		</div>
+		
+		
+		<script src="JS/angular.min.js"></script>
+		<script src="JS/index.js"></script>
+		<script>
+			var app=angular.module('myApp',[]);
+			app.controller('myController',['$scope','$http',function($scope,$http){
+				$http({
+					url:'shuju.json'					
+				}).then(function(data){
+					$scope.data=data.data;
+				})
+				$scope.int=function(val){
+					return Math.round(val)
+				}
+			}])
+		</script>
+	</body>
+</html>

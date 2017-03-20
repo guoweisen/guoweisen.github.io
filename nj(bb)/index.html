@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+   	<link rel="shortcut icon" href="njlogo.ico"/>
+   	<link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>商城</title>  
+    <!--[if lt IE 9]>
+		  <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+		<![endif]-->
+  </head>
+  <body>
+    <div class="bb_layout">
+    	<!--搜索栏开始-->
+    	<header class="bb_header">
+    		<div class="bb_header_box">
+    			<a href="#" class="icon_logo">
+    				<img src="img/logo.png" />
+    			</a>
+    			<form>
+    				<input type="text" placeholder="商品搜索" />
+    			</form>
+    			<a href="denglv.html" class="login">登录</a>
+    		</div>
+    	</header>
+    	<!--搜索栏结束-->
+    	
+    	<!--轮播图开始-->
+    	<div class="bb_banner">
+    		<ul class="clearfix">
+                    <li>
+                        <a href="#">
+                            <img src="img/banner4.jpg"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/banner1.jpg"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/banner2.jpg"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/banner3.jpg"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                           <img src="img/banner4.jpg"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/banner1.jpg"/>
+                        </a>
+                    </li>                   
+                </ul>
+                <ul>
+                    <li class="now"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>                    
+                </ul>
+    	</div>    	
+    	<!--轮播图结束-->
+    	
+    	<!--导航栏开始-->
+    	<nav class="bb_nav">
+    		<ul class="clearfix">
+                     <li>
+                         <a href="#">
+                             <img src="img/nav0.png"/>
+                             <p>商品分类</p>
+                         </a>
+                     </li>
+                      <li>
+                         <a href="#">
+                             <img src="img/nav7.png"/>
+                             <p>收藏</p>
+                         </a>
+                     </li>
+                     <li>
+                         <a href="wuliucx.html">
+                             <img src="img/nav1.png"/>
+                             <p>物流查询</p>
+                         </a>
+                     </li>
+                     <li>
+                         <a href="gouwuche.html">
+                             <img src="img/nav2.png"/>
+                             <p>购物车</p>
+                         </a>
+                     </li>
+                     <li>
+                         <a href="gerenzhongxin.html">
+                             <img src="img/nav3.png"/>
+                             <p>个人中心</p>
+                         </a>
+                     </li>                   
+                 </ul>
+    	</nav>
+    	<!--导航栏结束-->
+    	
+    	<!--商品区块开始-->
+    	<main class="bb_product">
+    		<section class="product_box">
+                    <div class="product_tit no_border">
+                        <div class="fl">
+                            <span class="sk_icon"></span>
+                            <span class="sk_word">限时特价</span>
+                            <div class="sk_time">
+                                <span>0</span>
+                                <span>0</span>
+                                <span>:</span>
+                                <span>0</span>
+                                <span>0</span>
+                                <span>:</span>
+                                <span>0</span>
+                                <span>0</span>
+                            </div>
+                        </div>
+                        <div class="fr">
+                            <a href="shangpin.html" class="sk_more">更多</a>
+                        </div>
+                    </div>
+                    <div class="product_con">
+                        <ul class="sk_product clearfix">
+                            <li>
+                                <a href="#">
+                                    <img src="img/tejia1.jpg" alt="" />
+                                </a>
+                                <p class="new_price">￥308</p>
+                                <p class="old_price">￥599</p>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/tejia2.jpg" alt="" />
+                                </a>
+                                <p class="new_price">￥459</p>
+                                <p class="old_price">￥679</p>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/tejia3.jpg" alt="" />
+                                </a>
+                                <p class="new_price">￥189</p>
+                                <p class="old_price">￥319</p>
+                            </li>                            
+                        </ul>
+                    </div>
+            </section>
+    		<section  class="list" ng-app="myApp" ng-controller="myController">
+    				<h3><img src="img/not.jpg"/><a href="shangpin.html">更多</a></h3>
+    				<a href="shangpin.html" ng-repeat="item in data">
+    					<img src="{{item.image}}" alt="加载中..."/>
+							<p>{{item.dd}}人已经购买</p>
+							<span>{{item.yh}}折</span><s>{{item.dj}}元</s>
+							<b>{{int(item.yh/10*item.dj)}}<span>></span></b>
+						</a>
+    		</section>
+    		<a href="shangpin.html">更多</a>
+    	</main>    		
+    	<!--商品区块结束-->
+    	
+    </div>
+    <script src="JS/angular.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+			var app=angular.module('myApp',[]);
+			app.controller('myController',['$scope','$http',function($scope,$http){
+				$http({
+					url:'shuju.json'					
+				}).then(function(data){
+					$scope.data=data.data;
+				})
+				$scope.int=function(val){
+					return Math.round(val)
+				}
+			}]);
+			
+			//判断有没登录，登录状态下显示头像
+			var logo=document.getElementsByClassName("login")[0];
+			var str = window.localStorage.getItem("touxiang")||"[]";
+			str = JSON.parse(str);
+			if(str.length==0){
+				logo.innerHTML="登录";
+			}else{
+				logo.innerHTML="<img src='img/touxiang.png'>";
+				logo.href="gerenzhongxin.html"
+			}
+		</script>
+
+  </body>
+</html>

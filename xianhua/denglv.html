@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+		<title>所有分类</title>
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="stylesheet" href="CSS/base.css" />
+		<link rel="stylesheet" href="CSS/shangpinfenlei.css">
+	</head>
+
+	<body>
+		<div class="wrap">
+			<!--头部开始-->
+			<div class="header">
+				<div class="head">
+					<a href="index.html" class="icon-fh"></a>
+					<h1>登录鲜花网</h1>
+					<a href="index.html" class="icon-zy"></a>
+				</div>
+			</div>
+			<!--头部结束-->
+
+			<!--主体内容开始-->
+			<div class="denglv">
+				<div>
+					<p><span></span><input type="text" placeholder="请输入手机号" id="yhm"/></p>
+					<p><span></span><input type="password" placeholder="请输入密码" id="mima"/></p>
+				</div>
+				<sapn id="span"></sapn>
+				<input type="button" value="登录" onclick="dengLv()"/>
+				<p><a href="zhuce.html">现在注册</a><a href="#">忘记密码？</a></p>
+			</div>
+			<!--主体内容结束-->
+		
+		</div>
+		<script>
+			var span=document.getElementById("span");
+			var yhm=document.getElementById("yhm");
+			var mima=document.getElementById("mima");
+			function dengLv(){
+				if(!(/^1[3|4|5|7|8][0-9]\d{4,8}$/.test(yhm.value))){ 
+				    span.innerHTML="手机号错误!";	
+				    yhm.value="";
+				}else if(!(/^(\w){6,20}$/.test(mima.value))){
+					span.innerHTML="密码错误!";
+					mima.value="";
+				}else{
+					span.innerHTML="";
+				}
+			}
+		</script>
+	</body>
+
+</html>

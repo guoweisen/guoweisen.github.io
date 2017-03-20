@@ -1,0 +1,103 @@
+/*头部开始*/
+.wrap{
+	background:#fff;
+}
+.head .icon-fh{	
+	background: url(../image/icons.png) 10px 9px no-repeat;
+	background-size: 25px 500px;
+	top: 0;
+	left: 0;
+}
+.head .icon-gwc{
+	background: url(../image/icons.png) 10px -437px no-repeat;
+	background-size: 25px 500px;
+	top: 0;
+	left: 45px;
+}
+.head .icon-zy{
+	background: url(../image/icons.png) 10px -382px no-repeat;
+	background-size: 25px 500px;
+	top: 0;
+	right: 0;
+}
+
+
+/*头部结束*/
+
+/*主体内容开始*/
+.home{
+	margin-top: 45px;
+	margin-bottom: 100px;
+	padding: 5px 10px;
+}
+.home .home-main{
+	width: 100%;
+	color: #b1b1b1;
+}
+.home .home-main div{
+	text-align: center;	
+}
+.home .home-main div img{
+	width: 100%;
+	max-width: 450px;
+	max-height: 450px;
+}
+.home .home-main h4{
+	line-height: 1.6em;
+}
+.home .home-main p{
+	padding: 3px 0;
+	border-bottom: 1px solid #ccc;
+}
+.home .home-main p:nth-child(3){
+	border: none;
+}
+.home .home-main p span b{
+	color: #C10000;
+}
+.home .home-main p:last-child input{
+	width: 50px;
+	height: 26px;
+	border: 1px solid #a9a9a9;
+	padding-left: 5px;
+}
+/*主体内容结束*/
+
+
+/*尾部开始*/
+.footer{
+	width: 100%;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+}
+.footer div{
+	width: 100%;
+	margin: 0 auto;
+	height: 60px;
+	min-width: 320px;
+	max-width: 640px;
+	background: #f1f1f1;
+	border-top: 1px solid #ccc;
+	padding: 10px;
+}
+.footer div input{
+	border:0 none;
+	width: 49%;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 5px;
+	color: #fff;
+	font-weight: 700;
+	font-size: 1.2em;
+	box-shadow: inset 0 1px 1px rgba(255,255,255,.2),0 1px 2px rgba(152,3,3,.4); 
+}
+.footer div input.btn-cart{
+	background: #C10000;
+}
+.footer div input.btn-buy{
+	background: #26aafc;
+	margin-left: 2%;
+}
+/*尾部结束*/

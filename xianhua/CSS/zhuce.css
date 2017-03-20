@@ -1,0 +1,100 @@
+/*头部开始*/
+.head h1{
+	padding-right:100px;
+}
+.head .icon-fh{	
+	background: url(../image/icons.png) 10px 9px no-repeat;
+	background-size: 25px 500px;
+	top: 0;
+	left: 0;
+}
+.head .icon-zy{
+	background: url(../image/icons.png) 10px -382px no-repeat;
+	background-size: 25px 500px;
+	top: 0;
+	right: 0;
+}
+
+/*头部结束*/
+
+
+
+/*主体内容开始*/
+
+
+.home{
+	margin-top: 45px;
+	border-bottom: 1px solid #ddd;
+	padding: 10px;
+}
+.home ul{
+	
+}
+.home ul li{
+	float: left;
+	width: 33.33%;
+	text-align: center;
+}
+.home ul li.red{
+	color: #C10000;
+}
+.zhuce{
+	padding: 0 10px;
+	margin-top: 12px;
+}
+.zhuce>input[type=text]{
+	padding: 15px 10px;
+	font-weight: 500;
+	border: 1px solid #D9D8D4;
+	border-radius: 5px;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.1),0 1px 2px rgba(245,245,245,.7);
+}
+.zhuce>input[type=text]:nth-child(1){
+	width: 100%;
+	margin-bottom: 10px;
+}
+.zhuce>input[type=text]:nth-child(2){
+	width: 100px;
+	margin-right: 8px;
+}
+.zhuce>i{
+	display: inline-block;
+	width: 80px;
+	font-weight:600;
+	border: 1px solid #D9D8D4;
+	border-radius: 5px;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.1),0 1px 2px rgba(245,245,245,.7);
+	height: 45px;
+	text-align: center;
+	line-height: 44px;
+	color: #c80000;
+	background: #fff;
+}
+.zhuce>input[type=button]{
+	width: 100%;
+	height: 45px;
+	background: #C10000;
+	border-radius: 5px;
+	margin-top: 10px;
+	text-align: center;
+	line-height: 45px;
+	font-size: 1.5em;
+	font-weight: 700;
+	letter-spacing: 2px;
+	color: #fff;
+	box-shadow: inset 0 1px 1px rgba(255,255,255,.2),0 1px 2px rgba(152,3,3,.4);
+}
+.zhuce>p{
+	margin-top: 10px;
+	font-size: 15px;
+}
+.zhuce>p input{
+	margin-right: 2px;
+}
+.zhuce>p a{
+	color: #C10000;
+	font-size: 15px;
+	margin-left: 3px;
+}
+
+/*主体内容结束*/

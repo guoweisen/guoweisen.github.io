@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+		<title>所有分类</title>
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="stylesheet" href="CSS/base.css" />
+		<link rel="stylesheet" href="CSS/zhuce.css">
+	</head>
+
+	<body>
+		<div class="wrap">
+			<!--头部开始-->
+			<div class="header">
+				<div class="head">
+					<a href="denglv.html" class="icon-fh"></a>
+					<h1>注册鲜花网会员</h1>
+					<a href="index.html" class="icon-zy"></a>
+				</div>
+			</div>
+			<!--头部结束-->
+
+			<!--主体内容开始-->
+			<div class="home clearfix">
+				<ul>
+					<li class="red">1&nbsp;输入手机号</li>
+					<li>2&nbsp;输入验证码</li>
+					<li>3&nbsp;设置密码</li>
+				</ul>
+			</div>
+			<div class="zhuce">
+				<input type="text" placeholder="请输入您的手机号码" id="sjh"/>
+				<input type="text" placeholder="输入验证码" id="yzm"/>
+				<i class="sjs" onclick="huaN()">659468</i>
+				<input type="button" value="下一步" onclick="xyB()"/>
+				<p><input type="checkbox" checked="checked"/>我已阅读并同意<a href="#">鲜花网用户协议</a></p>
+			</div>
+			<!--主体内容结束-->
+		
+		</div>
+		<script>
+			var sjs=document.getElementsByClassName("sjs")[0];
+			var sjh=document.getElementById("sjh");
+			var yzm=document.getElementById("yzm");
+			function huaN(){
+				var z="";
+				for(var i=0;i<6;i++){
+					z+=String(Math.random()).slice(2,3);
+				}		
+				sjs.innerHTML=z;				
+			}
+			function xyB(){
+				if(!(/^1[3|4|5|7|8][0-9]\d{4,8}$/.test(sjh.value))){ 
+			        alert("不是完整的11位手机号或者正确的手机号前七位"); 
+			        sjh.value=""; 
+			        huaN();
+			 	}else if(yzm.value!=sjs.innerHTML){
+			    	alert("验证码不正确");
+			    	yzm.value="";
+			    	huaN();
+			    }
+			}
+		</script>
+	</body>
+
+</html>
